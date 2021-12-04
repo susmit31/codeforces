@@ -26,12 +26,7 @@ int main(){
         getline(std::cin, prices);
         price_lists.push_back(tokenize_and_parse(prices));
     }
-    /*for (std::vector<int> pl : price_lists){
-        for (int p : pl){
-            std::cout<<p<<"#";
-        }
-        std::cout<<std::endl;
-    }*/
+
     for (int i=0; i<N_INPS; i++){
         std::cout<<count_chocs(lower_lims[i],upper_lims[i],budgets[i],price_lists[i])<<std::endl;
     }
