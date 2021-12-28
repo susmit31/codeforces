@@ -64,8 +64,8 @@ func plan_buildings(weights []int64) (int64, string){
 	var travel_time int64 = 0
 	var dist int64
 	for i:=1; i < len(coords); i++ {
-		dist = int64(math.Abs(float64(coords[i] - coords[0])))
-		travel_time += 2*dist*weights[i-1]
+		dist = int64(math.Abs(float64(coords[i]) - float64(coords[0])))
+		travel_time += int64(2)*dist*int64(weights[i-1])
 	}
 	return travel_time, join_slice(coords, " ")
 }
